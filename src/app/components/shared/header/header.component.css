@@ -1,0 +1,43 @@
+ .navbar{
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 1px 1px;
+}
+
+.navbar-toggler{
+  font-size: rem;
+}
+
+.navbar-toggler:focus{
+  color: rgb(230, 230, 230);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 2px;
+} 
+
+
+.navbar-nav .dropdown-menu {
+  background-color: #f8f9fa; /* Background color */
+  border: 1px solid #ced4da; /* Border color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+  
+}
+
+.navbar-nav .dropdown-item {
+  color: #495057; /* Text color */
+ 
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus {
+  background-color: #e9ecef; /* Hover background color */
+  color: #495057; /* Hover text color */
+}
+
+.navbar-nav .dropdown-divider {
+  margin: 0.5rem 0; /* Divider margin */
+  border-color: #ced4da; /* Divider color */
+}
+
+

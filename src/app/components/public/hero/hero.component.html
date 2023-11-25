@@ -1,0 +1,58 @@
+<div class="title">Today's Top Headlines </div>
+<p class = "selected" style="color: black; font-weight: bold;">You are Reading Top Headlines of : {{selected}}</p>
+
+<div class="container-fluid">
+  <marquee behavior="scroll" direction="right">{{timeNow}}</marquee>
+  <div class="outerSection">
+    
+
+    <mat-form-field style="display: flex;flex-direction: row-reverse;margin-right: 10px;margin-top: -50px;">
+      <mat-label>Select Topic</mat-label>
+      <mat-select (selectionChange)="getNews($event.value)" [(value)]="selected">
+        <mat-option value="US">Top Headlines (USA)</mat-option>
+        <mat-option value="INDIA">Top Headlines (INDIA)</mat-option>
+        <mat-option value="UK">Top Headlines (UK)</mat-option>
+        <mat-option value="ENTERTAINMENT (US)">Entertainment (USA)</mat-option>
+        <mat-option value="ENTERTAINMENT (INDIA)">Entertainment (INDIA)</mat-option>
+        <mat-option value="ENTERTAINMENT (UK)">Entertainment (UK)</mat-option>
+        <mat-option value="BUSINESS (US)">Business (USA)</mat-option>
+        <mat-option value="BUSINESS (INDIA)">Business (INDIA)</mat-option>
+        <mat-option value="BUSINESS (UK)">Business (UK)</mat-option>
+        <mat-option value="SPORTS (US)">Sports (USA)</mat-option>
+        <mat-option value="SPORTS (INDIA)">Sports (INDIA)</mat-option>
+        <mat-option value="SPORTS (UK)">Sports (UK)</mat-option>
+        <mat-option value="TECHNOLOGY (US)">Technology (USA)</mat-option>
+        <mat-option value="TECHNOLOGY (INDIA)">Technology (INDIA)</mat-option>
+        <mat-option value="TECHNOLOGY (UK)">Technology (UK)</mat-option>
+        <mat-option value="CNN NEWS">CNN News</mat-option>
+        <mat-option value="BBC NEWS">BBC News</mat-option>
+        <mat-option value="GOOGLE NEWS">Google News</mat-option>
+        <mat-option value="APPLE">Apple</mat-option>
+        <mat-option value="TESLA">Tesla</mat-option>
+        <mat-option value="TECHCRUNCH">TechCrunch</mat-option>
+        <mat-option value="WALL STREET JOURNAL">The Wall Street Journal </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <div class="row">
+      <div class="card col-md-3" *ngFor="let item of HeadLinesArray" >
+        <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+          <img [src]="item.urlToImage" class="thumb" style="padding: 10px;" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <div>
+            <h5 class="card-title">{{item.title}}</h5>
+          </div>
+           <p class="card-text">{{item.publishedAt}}</p> 
+          <a [href]="item.url" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
